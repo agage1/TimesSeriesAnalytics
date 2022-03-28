@@ -8,11 +8,8 @@ library(dplyr)
 library(ggeasy)
 library(seasonal)
 
-# Path where data is
-file_path <- "~/Documents/BAS475/multiTimeline.csv"
-
 # Data starts in 3rd row, skip first 2 rows
-g_trends <- read.csv(file_path, skip = 2)
+g_trends <- read.csv("pmdata.csv", skip = 2)
 # Rename columns
 names(g_trends) <- c("Month", "Interest")
 # Convert Month to date
